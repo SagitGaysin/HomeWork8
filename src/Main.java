@@ -9,7 +9,7 @@ public class Main {
     }
 
     public static void task1() {
-        System.out.println("Задача 1");
+        System.out.println("\n Задача 1");
         // Условие задачи: Объявите три массива:Целочисленный массив, заполненный тремя цифрами — 1, 2 и 3 — с помощью ключевого слова new.
 
         int[] weights = new int[3];
@@ -28,87 +28,82 @@ public class Main {
     }
 
     public static void task2() {
-        System.out.println("Задача 2");
+        System.out.println("\n Задача 2");
         /* Условие задачи:
         Распечатайте на отдельной строчке элементы каждого массива по порядку через запятую.
         В конце строки запятую ставить не надо
          */
 
-        int[] weights = new int[3];
-        weights[0] = 1;
-        weights[1] = 2;
-        weights[2] = 3;
-        for (int i = 0; i < weights.length; i++) {
-            if (i == weights.length - 1) {
-                System.out.print(weights[i]);
-                break;
+        int[] arr = new int[3];
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 3;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if (i < arr.length - 1) {
+                System.out.print(", ");
             }
-            System.out.print(weights[i] + ", ");
         }
         System.out.println();
 
         double[] fractions = {1.57, 7.654, 9.986d};
         for (int i = 0; i < fractions.length; i++) {
-            if (i == fractions.length - 1) {
-                System.out.print(fractions[i]);
-                break;
+            System.out.print(fractions[i]);
+            if (i < fractions.length - 1) {
+                System.out.print(", ");
             }
-            System.out.print(fractions[i] + ", ");
         }
         System.out.println();
 
         int[] numbers = {4, 2, 6, 9, 23, 1, 5, 7, 8, 0, 1};
         for (int i = 0; i < numbers.length; i++) {
-            if (i == numbers.length - 1) {
-                System.out.print(numbers[i]);
-                break;
+            System.out.print(numbers[i]);
+            if (i < numbers.length - 1) {
+                System.out.print(", ");
             }
-            System.out.print(numbers[i] + ", ");
         }
         System.out.println();
     }
 
     public static void task3() {
-        System.out.println("Задача 3");
+        System.out.println("\n Задача 3");
         /* Условие задачи:
         Распечатайте на отдельной строчке элементы каждого массива в обратном порядке через запятую.
         В конце строки запятую ставить не надо.
          */
 
+        // Первый массив
         int[] weights = new int[3];
         weights[0] = 1;
         weights[1] = 2;
         weights[2] = 3;
-        for (int a = 2; a < weights.length; a--) {
-            if (a == weights[0] - 1) {
-                System.out.print(weights[a]);
-                break;
-            }
-            System.out.print(weights[a] + ", ");
+        for (int i = weights.length - 1; i > 0; i--) {
+            System.out.print(weights[i] + ", ");
         }
+        System.out.print(weights[0]);
         System.out.println();
+
+
+        //Второй массив
 
         double[] fractions = {1.57, 7.654, 9.986};
-        for (int b = 2; b < fractions.length && b >= 0; b--) {
-            if (b == fractions[0] - 1) {
-                System.out.print(fractions[b]);
-                break;
-            }
-            System.out.print(fractions[b] + ", ");
+        for (int i = fractions.length - 1; i > 0; i--) {
+            System.out.print(fractions[i] + ", ");
         }
+        System.out.print(fractions[0]);
+        System.out.println();
+
+        // Третий массив
 
         int[] numbers = {4, 2, 6, 9, 23, 1, 5, 7, 8, 0, 1};
-        for (int c = 10; c < numbers.length; c--) {
-            if (c == numbers[10] - 1) {
-                System.out.print(numbers[c]);
-                break;
+        for (int i = numbers.length - 1; i > 0; i--) {
+            System.out.print(numbers[i] + ", ");
             }
-            System.out.print(numbers[c] + ", ");
-        }
+        System.out.print(numbers[0]);
         System.out.println();
-    }
+        }
     public static void task4() {
-        System.out.println("Задача 4");
+        System.out.println("\n Задача 4");
         //Условие задачи: Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1)
 
         int[] weights = new int[3];
@@ -119,7 +114,7 @@ public class Main {
             if (weights[i] % 2!= 0) {
                 weights[i] = weights[i] + 1;
             }
-            System.out.print(weights[i] + ", ");
-        } // Сегодня установил плагин TabNine. После инициализации массива, плагин сходу предложил решение задачи)) Чудеса))
+            System.out.println(weights[i]);
+        }
     }
 }
